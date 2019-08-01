@@ -20,3 +20,4 @@ new Vue({
 
 //vue.use(VueUI);
 //vue.use(vuetify);
+vue.use(router)

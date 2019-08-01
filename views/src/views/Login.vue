@@ -17,22 +17,26 @@
             <el-button class="btn1">Registrar-se</el-button>
           </el-col>
           <el-col :span="12">
-            <el-button class="btn2" @click="login(username, password)">Entrar</el-button>
+            <router-link to="/home">
+              <el-button class="btn2" @click="login(username, password)">Entrar</el-button>
+            </router-link>
           </el-col>
         </el-row>
       </el-card>
     </el-col>
+    <router-view></router-view>
+
   </el-row>
 </template>
 
 <script>
-import logo from "./Logo";
+import logo from "../components/Logo.vue";
 import axios from "axios";
 
 export default {
   name: "Login",
   components: [logo],
-  data: () => ({
+data: () => ({
     visible: false,
     username: "",
     password: ""
